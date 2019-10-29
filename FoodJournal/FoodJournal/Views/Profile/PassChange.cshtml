@@ -1,0 +1,71 @@
+﻿@model DataLayer.User
+
+@{
+    ViewBag.Title = "PassChange";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+<div class="container">
+
+    <form method="post" id="passwordConfirmForm">
+        <div class="form-horizontal">
+
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="bg-info text-white">Password Change</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a style="font-size:25px;" href="/profile/view/@Convert.ToInt32(TempData["UserId"])">Back To Profile</a>
+                </div>
+            </div>
+
+            <hr />
+
+
+            <div class="form-group">
+                <label class="col-md-3 h1">New Password</label>
+                <div class="col-md-9">
+                    <div class="ui-widget">
+                        <input class="form-control" type="password" name="Password" id="pass" required="required" />
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" name="UserID" value="@Convert.ToInt32(TempData["UserId"])" />
+
+            <div class="form-group">
+                <label class="col-md-3 h1">Confirm Password</label>
+                <div class="col-md-9">
+                    <div class="ui-widget">
+                        <input class="form-control" type="password" name="Password" id="conpass" required="required" />
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-danger" id="errorMessage"></h2>
+
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <button style="height:35px;" type="button" onclick="passCheck()" class="btn btn-primary btn-lg">Update</button>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+
+
+@section scripts{
+    <script src="~/Scripts/passChange.js"></script>
+
+}

@@ -1,0 +1,52 @@
+﻿@model DataLayer.Class.Restaurant
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">Restaurant Information</h1>
+        </div>
+    </div>
+    <dl class="dl-horizontal">
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RestaurantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RestaurantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a style="padding:10px; 5px;" href="/Restaurant/MyRestaurants/@Convert.ToInt32(Session["UserID"])" class="bg-primary text-white">Back</a>
+        </div>
+    </div>
+
+
+</div>

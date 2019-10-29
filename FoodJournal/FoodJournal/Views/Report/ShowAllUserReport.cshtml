@@ -1,0 +1,141 @@
+﻿@model IEnumerable<DataLayer.Class.Report>
+
+@{
+    ViewBag.Title = "ShowAllUserReport";
+    Layout = "~/Views/Shared/adminheaderandfooter.cshtml";
+}
+
+@section styles{
+    <style>
+        .table1 tr th, .table2 tr td{
+            width:25%;
+        }
+    </style>
+
+<link href="~/Content/css/admin-report-switch.css" rel="stylesheet" />
+
+    }
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-danger text-white">Report Against Users</h1>
+        </div>
+    </div>
+
+
+     <table class="table table1" style="text-align:center">
+   
+             <tr>
+
+                 <th>
+                     Reported Account
+                 </th>
+
+                 <th>
+                     Reported By
+                 </th>
+
+                 <th>
+                     Time
+                 </th>
+
+                 <th>
+                     Details
+                 </th>
+                 <th>
+                     Status
+                 </th>
+             </tr>
+        
+</table>
+
+    @foreach (var item in Model)
+    {
+        <table class="table2 table table-striped table-hover" style="text-align:center">
+            <tbody>
+                <tr>
+                    <td>
+                       <a href="/Profile/view/@item.ReportedIdUser.UserID">@item.ReportedIdUser.Name</a>
+                    </td>
+
+                    <td>
+                       <a href="/Profile/view/@item.ReportedByUser.UserID">@item.ReportedByUser.Name</a>
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+
+                    <td>
+                        <button class="bg-dark text-white" onclick="details(@item.ReportId)"> Details</button>
+                    </td>
+
+                    <td>
+                        @{
+                            if (item.ReportedIdUser.Status == 0)
+                            {
+                                <label class="switch">
+                                    <input onclick="UserStatusChange(@item.ReportedIdUser.UserID)" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            }
+                            else
+                            {
+                                <label class="switch">
+                                    <input checked onclick="UserStatusChange(@item.ReportedIdUser.UserID)" type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            }
+                        }
+
+                    </td>
+                </tr>
+
+            </tbody>
+</table>
+
+    <div style="border: 2px solid blue; display:none; font-size: 18px;" id="resDetails_@item.ReportId">
+        <table class="table">
+
+            <tr>
+                <th>Report Details</th>
+                <td>@item.Details</td>
+            </tr>
+        </table>
+    </div>
+
+    }
+
+
+</div>
+
+
+
+@section scripts{
+
+    <script>
+
+
+
+        function details(buttonid) {
+
+            var btnid = "resDetails_" + buttonid;
+
+            //  alert(btnid);
+
+           //  $("#" + btnid).css('display', 'none');
+
+            $("#" + btnid).toggle("blind", 500);
+
+        }
+
+    </script>
+    
+  
+<script src="~/Scripts/status.js"></script>
+    
+    }

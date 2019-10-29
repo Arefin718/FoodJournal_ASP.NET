@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DataLayer.Post>
+
+@{
+    ViewBag.Title = "ShowPostsByCategory";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-success text-white">@ViewData["Category"].ToString().ToUpper()</h1>
+        </div>
+    </div>
+
+
+    @{foreach (var item in Model)
+
+            {
+        <div class="item col-md-4 col-xs-6 col-xxs-12">
+            <article class="entry">
+                <div class="entry__img-holder">
+                    <a href="/post/details/@item.PostID">
+                        <img style="height:300px;width:100%" src="@item.Image" alt="" class="entry__img">
+                    </a>
+                </div>
+                <div class="entry__body">
+                    <div class="entry__header">
+                        <a href="#" class="entry__meta__category">@item.Category</a>
+                        <h2 class="entry__title">
+                            <a href="/post/details/@item.PostID">@item.Title</a>
+                        </h2>
+                    </div>
+
+                </div>
+            </article>
+        </div>
+    }
+    }
+
+
+
+</div>

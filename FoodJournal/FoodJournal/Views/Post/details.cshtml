@@ -1,0 +1,414 @@
+﻿@model DataLayer.Post
+
+@{
+    ViewBag.Title = "details";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+@section styles{
+<link href="~/Content/css/post-details.css" rel="stylesheet" />
+<link href="~/Content/css/user-login.css" rel="stylesheet" />
+    }
+
+
+<div class="loader-mask">
+    <div class="loader">
+        <div></div>
+    </div>
+</div>
+
+
+<!-- logo -->
+<header class="logo-wrap">
+    <a href="index.html" class="logo-link">
+        <img class="logo logo--dark" src="~/Content/images/logo_dark.png" alt="logo">
+    </a>
+</header>
+
+<main class="main oh">
+
+    <!-- Post Img -->
+    <div class="container">
+        <div class="single-post__img-holder" style="background-image: url('@Model.Image')">
+            <!-- <images src="images/blog/post_1_big.jpg" alt="" class="entry__img"> -->
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="section-wrap section-blog pt-50 pb-50">
+        <div class="container">
+
+            @{
+
+                if (Session["UserID"] != null)
+                {
+
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <button id="popUpOpen" class="text-danger ui-button" data-popup-open="popup-1">Report</button>
+                        </div>
+                    </div>
+
+                }
+
+            }
+
+            <div class="row">
+                @{
+                    if (Model.UserID == Convert.ToInt32(Session["UserID"]))
+                    {
+                        <div class="col-md-12">
+                            <a style="font-size:larger" href="/post/edit/@Model.PostID" class="btn  bg-primary">Edit</a>
+                            <a style="font-size:larger;" href="/post/delete/@Model.PostID" class="btn  bg-danger">Delete</a>
+                        </div>
+                    }
+                }
+
+             
+
+                <div class="row left" style="margin-top:20px;">
+                    <div class="col-md-12">
+                        @{
+                            if (@Model.RestaurantId != 0)
+                            {
+                                <a href="/restaurant/MenusAndOffers/@Model.RestaurantId"><h1 class="text-success"><b class="text-dark">Reataurant Name: </b>@Model.RestaurantName</h1></a>
+
+                            }
+                            else
+                            {
+                                <h1 class="text-dark"><b class="text-dark">Reataurant Name: </b>@Model.RestaurantName</h1>
+
+                            }
+                        }
+
+                        <h1><b>Location: </b>@Model.Location</h1>
+                        <h1><b>Price: </b>@Model.Price</h1>
+                        <span class="rating-title"><b>Rating:</b></span>
+
+
+                        @{
+                            for (int i = 0; i < Int32.Parse(Model.Rating.ToString()); i++)
+                            {
+                                <span class="rating">&#x2605;</span>
+                            }
+
+                            for (int i = Int32.Parse(Model.Rating.ToString()); i < 5; i++)
+                            {
+                                <span class="rating">&#9734;</span>
+                            }
+                        }
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+            
+                <!-- content -->
+                <div class="col-md-8 blog__content mb-50">
+                    <div class="entry-box">
+
+                        <!-- standard post -->
+                        <article class="entry single-post__entry">
+
+                            <div class="single-post__entry__header">
+                                <a href="#" class="entry__meta__category">@Model.Category</a>
+                                <h1 class="single-post__entry__title">@Model.Title</h1>
+
+                                <ul class="entry__meta">
+                                    <li>
+                                        <a href="#" class="entry__meta__date">@Model.Time</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="entry__meta__likes">
+                                            <i class="ui-heart entry__meta__icon"></i>50
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="entry__meta__comments">
+                                            <i class="ui-comment entry__meta__icon"></i>2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="entry__article">
+
+                             <p>@Model.Description</p>
+
+
+
+                                <!-- Share / tags -->
+                                <div class="row entry__share-tags">
+                                    <div class="col-sm-6">
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="entry-share">
+                                            <span>Share: </span>
+                                            <div class="socials socials--nobase">
+                                                <a href="#" class="twitter"><i class="ui-twitter"></i></a>
+                                                <a href="#" class="facebook"><i class="ui-facebook"></i></a>
+                                                <a href="#" class="instagram"><i class="ui-instagram"></i></a>
+                                                <a href="#" class="pinterest"><i class="ui-pinterest"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <!-- end share / tags -->
+                            </div> <!-- end entry article -->
+                        </article> <!-- end standard post -->
+                        <!-- Comments -->
+
+
+                        <div class="entry-comments mt-30">
+                            <h5 class="entry-comments__title mb-40">Comments</h5>
+                        </div>
+                        <div id="comments">
+
+                            @{
+
+                                foreach (var item in ViewData["CommentDetails"] as List<DataLayer.Comment>)
+
+                                {
+
+                                    <div class="entry-comments mt-30">
+
+
+                                        <ul class="comment-list">
+                                            <li class="comment">
+                                                <div class="comment-body">
+                                                    <div class="comment-avatar">
+                                                        <img style="height:80px; width: 80px;" alt="" src="@item.User.Image">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <h6 class="comment-author">@item.User.Name</h6>
+                                                        <div class="comment-metadata">
+                                                            <a href="#" class="comment-date">@item.Time</a>
+                                                        </div>
+                                                        <p>@item.CommentDescription</p>
+                                                    </div>
+                                                </div>
+
+                                            </li> <!-- end 1-2 comment -->
+
+                                        </ul>
+                                    </div> <!-- end comments -->
+
+                                }
+
+
+                            }
+                        </div>
+
+                            <!-- Comment Form -->
+                            <div id="respond" class="comment-respond">
+                                <h5 class="comment-form__title mb-40">Leave a Comment</h5>
+                                <form id="commentform" class="comment-form">
+                                    <p class="comment-form-comment">
+                                        <label for="comment">Comment</label>
+                                        <input type="hidden" id="PostId" value="@Model.PostID" />
+                                        <input type="hidden" id="UserId" value="@Convert.ToInt32(Session["UserID"])" />
+                                        <input type="hidden" id="Time" value="@DateTime.Now.ToString()" />
+                                        <input placeholder="Write your comment here..." style="height:40px" type="text" id="CommentDescription" required="required" />
+                                    </p>
+
+                                </form>
+                            </div> <!-- end comment form -->
+                            <!-- Related Posts -->
+                            <div class="related-posts mt-60">
+                                <h5 class="related-posts__title">Recent Posts</h5>
+                                <p class="related-posts__subtitle mb-30">Amazing taste on this recipes.</p>
+
+                                <div class="row">
+
+
+                                   @{
+
+                                       foreach (var post in ViewData["RecenePosts"] as List<DataLayer.Post>)
+                                       {
+                                        <div class="col-md-6">
+                                            <article class="entry mb-10">
+                                                <div class="entry__img-holder">
+                                                    <a href="/post/details/@post.PostID">
+                                                        <img  style="height:250px;width:100%"   src="@post.Image" alt="" class="entry__img">
+                                                    </a>
+                                                </div>
+                                                <div class="entry__body entry__body--border">
+                                                    <div class="entry__header">
+                                                        <a href="#" class="entry__meta__category">@post.Category</a>
+                                                        <h2 class="entry__title">
+                                                            <a href="/post/details/@post.PostID">@post.Title</a>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="entry__footer">
+                                                        <a href="/post/details/@post.PostID" class="entry__meta__date">@post.Time</a>
+                                                        <ul class="entry__meta entry__meta--right">
+                                                            <li>
+                                                                <a href="#" class="entry__meta__likes">
+                                                                    <i class="ui-heart entry__meta__icon"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="entry__meta__comments">
+                                                                    <i class="ui-comment entry__meta__icon"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div> <!-- end col -->
+                                       }
+
+                                }
+
+                  
+
+                                
+
+                                </div>
+                            </div> <!-- end related posts -->
+
+                        </div> <!-- end entry-box -->
+                </div> <!-- end col -->
+                <!-- sidebar -->
+                <aside class="col-md-4 sidebar">
+
+                    <!-- about me -->
+                    <div class="widget widget-about text-center">
+                        <a href="/Profile/view/@Model.User.UserID">
+                            <img style="height:160px; width:160px;" src="@Model.User.Image" alt="" class="widget-about-img">
+                        </a>
+                            <p class="widget-about-text">Hi there! My name is <a href="/Profile/view/@Model.User.UserID">@Model.User.Name</a>, my desire is to help you to share my special and delicious recipes.</p>
+                            <div class="socials">
+                                <a href="#"><i class="ui-twitter"></i></a>
+                                <a href="#"><i class="ui-facebook"></i></a>
+                                <a href="#"><i class="ui-instagram"></i></a>
+                                <a href="#"><i class="ui-pinterest"></i></a>
+                                <a href="#"><i class="ui-google"></i></a>
+                            </div>
+</div>
+
+                    <!-- Categories -->
+                    <div class="widget widget_categories">
+                        <h4 class="widget-title">Categories</h4>
+                        <ul>
+
+                            @{
+                                foreach (var cat in ViewData["Categories"] as List<string>)
+                                {
+                                    <li>
+                                        <a class="h4 text-success" href="/post/ShowPostsByCategory/@cat.Split(' ').First().ToString()">@cat</a>                   
+                                    </li>
+                                }
+                                }
+
+
+                            @*<li>
+                                <a href="#">Lunch</a>
+                                (1)
+                            </li>*@
+                            
+
+                        </ul>
+                    </div>
+
+
+                    <!-- Popular Posts -->
+                    <div class="widget widget-popular-posts">
+                        <h4 class="widget-title">Popular Posts</h4>
+                        <ul class="widget-popular-posts__list">
+
+                            @{
+                                foreach (var post in ViewData["PopularPosts"] as List<DataLayer.Post>)
+                                {
+                                    <li>
+                                        <article class="clearfix">
+                                            <div class="widget-popular-posts__img-holder">
+                                                <a href="/post/details/@post.PostID">
+                                                    <img style="width:92px; height:75px;" src="@post.Image" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="widget-popular-posts__entry">
+                                                <h3 class="widget-popular-posts__entry-title"><a href="/post/details/@post.PostID">@post.Title</a></h3>
+                                            </div>
+                                        </article>
+                                    </li>
+                                }
+                            }
+
+
+                        </ul>
+                    </div>
+
+                </aside> <!-- end sidebar -->
+
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> <!-- end blog standard -->
+    <!-- Instagram Feed -->
+    <div class="instagram-feed text-center">
+        <a href="http://localhost:8000/" class="instagram-feed__link">follow Food Journal</a>
+        
+        <ul id="instagram-feed__list"></ul>
+    </div>
+
+    <div class="container">
+        <div class="popup" id="reportPopUp" data-popup="popup-1">
+
+            <div class="popup-inner">
+
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h2 class="bg-danger text-white">Report Against This Review</h2>
+
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+
+                    <form id="report">
+                        <input type="hidden" value="Post" name="Type" id="TypeOfPost" />
+                        <input type="hidden" value="@Session["UserID"]" name="ReportedBy" id="ReportedBy" />
+
+                        <input type="hidden" value="@Model.UserID" name="ReportedId" id="ReportedId" />
+
+                        <input type="hidden" value="@Model.PostID" name="PostId" id="PostId" />
+
+                        <textarea name="Details" rows="10" cols="76" id="Details">
+                        </textarea>
+
+                        <button onclick="reportSubmit()" class="bg-danger text-white" type="submit">Submit</button>
+
+                    </form>
+
+                </div>
+
+
+
+
+
+                <div class="row">
+                    <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    @section scripts
+    {
+        <script src="~/Content/js/comment.js"></script>
+    <script src="~/Scripts/report.js"></script>
+
+    }

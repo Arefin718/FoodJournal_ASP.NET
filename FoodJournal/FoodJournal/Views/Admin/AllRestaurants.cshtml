@@ -1,0 +1,84 @@
+﻿@model IEnumerable<DataLayer.Class.Restaurant>
+
+@{
+    ViewBag.Title = "AllRestaurants";
+    Layout = "~/Views/Shared/adminheaderandfooter.cshtml";
+}
+
+@section styles{
+  
+<link href="~/Content/css/admin-allrestaurant.css" rel="stylesheet" />
+    }
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">All Restaurants</h1>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="col-md-12 text-right">
+            <h3 class="bg-light  text-white">
+                <span class="font-weight-bold text-dark">Sort By: </span>
+                <a href="/admin/AllRestaurants" class="btn sort btn-md btn-outline-primary">Rating</a>
+                <a href="/admin/RestaurantsByMostReview" class="btn sort btn-md  btn-outline-primary">Most Review</a>
+            </h3>
+        </div>
+    </div>
+
+
+ 
+    <table class="table">
+        <tr>
+           
+            <th>
+              Restaurant Name
+            </th>
+            <th>
+               Location
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                Owned By
+            </th>
+            <th>
+               Owner Contact
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    
+                    <a href="restaurant/MenusAndOffers/@item.RestaurantId">@item.RestaurantName</a>
+                  
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    <a href="/profile/view/@item.User.UserID">@item.User.Name</a>
+                   
+                </td>
+                <td>
+                    @item.User.Email
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,229 @@
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\FoodJournal.dll.config
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\FoodJournal.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\FoodJournal.pdb
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\DataLayer.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\EntityFramework.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Helpers.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Mvc.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Razor.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\DataLayer.pdb
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\EntityFramework.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Razor.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Helpers.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\System.Web.Mvc.xml
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\obj\Debug\FoodJournal.csprojResolveAssemblyReference.cache
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\obj\Debug\FoodJournal.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\obj\Debug\FoodJournal.pdb
+D:\MID Project\FoodJournal\FoodJournal\obj\Debug\FoodJournal.csprojResolveAssemblyReference.cache
+D:\MID Project\FoodJournal\FoodJournal\obj\Debug\FoodJournal.csproj.CoreCompileInputs.cache
+D:\MID Project\FoodJournal\FoodJournal\bin\FoodJournal.dll.config
+D:\MID Project\FoodJournal\FoodJournal\bin\FoodJournal.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\FoodJournal.pdb
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csc.exe
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csc.exe.config
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csc.rsp
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csi.exe
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csi.exe.config
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\csi.rsp
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.AppContext.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Collections.Immutable.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Console.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.Process.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.IO.Compression.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.IO.Pipes.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Reflection.Metadata.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.AccessControl.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Claims.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Security.Principal.Windows.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Threading.Thread.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.ValueTuple.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XmlDocument.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\vbc.exe
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\vbc.exe.config
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\vbc.rsp
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe
+D:\MID Project\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe.config
+D:\MID Project\FoodJournal\FoodJournal\bin\DataLayer.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\EntityFramework.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\Microsoft.Web.Infrastructure.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Helpers.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Mvc.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Razor.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.dll
+D:\MID Project\FoodJournal\FoodJournal\bin\DataLayer.pdb
+D:\MID Project\FoodJournal\FoodJournal\bin\DataLayer.dll.config
+D:\MID Project\FoodJournal\FoodJournal\bin\EntityFramework.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Razor.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Helpers.xml
+D:\MID Project\FoodJournal\FoodJournal\bin\System.Web.Mvc.xml
+D:\MID Project\FoodJournal\FoodJournal\obj\Debug\FoodJournal.dll
+D:\MID Project\FoodJournal\FoodJournal\obj\Debug\FoodJournal.pdb
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csc.exe
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csc.exe.config
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csc.rsp
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csi.exe
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csi.exe.config
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\csi.rsp
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.AppContext.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Console.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.IO.Compression.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.IO.Pipes.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Claims.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Threading.Thread.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.ValueTuple.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\vbc.exe
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\vbc.exe.config
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\vbc.rsp
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\arefin\Google Drive\AIUB\AIUB FALL 17\ATP-2\Project\Mid\FoodJournal\FoodJournal\FoodJournal\bin\roslyn\desktop.ini
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\FoodJournal.dll.config
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\FoodJournal.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\FoodJournal.pdb
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csc.exe
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csc.exe.config
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csc.rsp
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csi.exe
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csi.exe.config
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\csi.rsp
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\desktop.ini
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.AppContext.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Console.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.IO.Compression.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.IO.Pipes.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Claims.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Threading.Thread.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.ValueTuple.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\vbc.exe
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\vbc.exe.config
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\vbc.rsp
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\DataLayer.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\EntityFramework.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Helpers.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Mvc.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Razor.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\DataLayer.pdb
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\EntityFramework.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\EntityFramework.SqlServer.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Razor.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.Deployment.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Webpages.Razor.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Helpers.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\bin\System.Web.Mvc.xml
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\obj\Debug\FoodJournal.csprojResolveAssemblyReference.cache
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\obj\Debug\FoodJournal.dll
+C:\Users\arefin\Google Drive\AIUB\_Projects\FoodJournal_ASP.NET\FoodJournal\FoodJournal\obj\Debug\FoodJournal.pdb

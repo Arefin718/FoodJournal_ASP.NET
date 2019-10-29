@@ -1,0 +1,91 @@
+﻿@model DataLayer.Class.Restaurant
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+@section styles{
+    <style>
+        #geomap {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+}
+
+
+
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="bg-info text-white">Update Restaurant Info</h1>
+                </div>
+            </div>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.RestaurantId)
+
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RestaurantName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.RestaurantName, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.RestaurantName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="ui-widget">
+                        <input class="form-control" value="@Model.Location" name="Location" id="search_location" required="required">
+                    </div>
+                </div>
+            </div>
+
+            <input name="Latitude" type="hidden" class="search_latitude">
+            <input name="Longitude" type="hidden" class="search_longitude">
+
+
+            <div class="form-group">
+                <div class="col-md-offset-5 col-md-2">
+                    <input type="submit" value="Update" class="btn btn-default" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <a style="padding:10px; 5px;" href="/Restaurant/MyRestaurants/@Convert.ToInt32(Session["UserID"])" class="bg-primary text-white">Back</a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <div id="geomap"></div>
+        </div>
+    </div>
+
+ 
+</div>
+
+
+
+@section scripts{
+
+    <script src="~/Content/js/jquery-ui.js"></script>
+    <script src="~/Scripts/restaurant-create.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEJeUG6el1uAtNYRLvMBWr3tLasd2GhA"></script>
+
+
+}

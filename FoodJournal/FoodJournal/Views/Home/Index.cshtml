@@ -1,0 +1,293 @@
+﻿@model IEnumerable<DataLayer.Post>
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+@section styles
+    {
+   
+    <link href="~/Content/css/owl.theme.green.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.carousel.min.css" rel="stylesheet" />
+
+}
+
+<body class="bg-light">
+
+
+    <!-- logo -->
+
+    <header class="logo-wrap">
+        @*<a href="/home/index" class="logo-link">*@
+            <a href="/home/index" class="">
+                <img style="height: 175px;" class="" src="~/Content/images/logo.png" alt="logo">
+            </a>
+</header>
+
+
+    <main class="main oh">
+
+        <!-- Hero Slider -->
+        <section class="hero">
+            <div class="container-fluid no-padding">
+                <div id="owl-hero" class="owl-carousel owl-theme">
+
+                    <div class="hero__slide" style="background-image: url(../../Content/images/blog/slider_post_1.jpg)">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <div class="container relative">
+                                    <div class="entry__header">
+                                        <a href="blog-single.html" class="entry__meta__category">Special</a>
+                                        <h1 class="hero__slide__entry__title">
+                                            <a href="blog-single.html">Best Burgers, From Freshly Cheddar with Meat</a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="hero__slide" style="background-image: url(../../Content/images/blog/slider_post_2.jpg)">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <div class="container relative">
+                                    <div class="entry__header">
+                                        <a href="blog-single.html" class="entry__meta__category">Special</a>
+                                        <h1 class="hero__slide__entry__title">
+                                            <a href="blog-single.html">Italian Chicken Burritos with Onions</a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="hero__slide" style="background-image: url(../../Content/images/blog/slider_post_3.jpg)">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <div class="container relative">
+                                    <div class="entry__header">
+                                        <a href="blog-single.html" class="entry__meta__category">Special</a>
+                                        <h1 class="hero__slide__entry__title">
+                                            <a href="blog-single.html">Yummy Strawberry Pancake</a>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div> <!-- end owl -->
+            </div>
+        </section> <!-- end hero slider -->
+        <!-- Newsletter -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget widget_mc4wp_form_widget newsletter-wide">
+
+                        <div class="newsletter-wide__text">
+                            <h3 class="widget-title newsletter-wide__title">Subscrice to get updates about offers</h3>
+                            <p>Join us in an amazing collections of new special recipes and contact now.</p>
+                        </div>
+
+                        <div class="newsletter-wide__form">
+                            <form id="mc4wp-form-1" class="mc4wp-form" method="post" action="/Other/subscribe">
+                                <div class="mc4wp-form-fields">
+                                    <p>
+                                        <input type="email" id="subscribeemailaddress" name="EMAIL" placeholder="Your email address" required="">
+                                        <input type="submit" value="Subscribe">
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div> <!-- end col -->
+
+            </div>
+        </div> <!-- end newsletter -->
+        <!-- Content -->
+        <section class="section-wrap pt-0 section-blog">
+            <div class="container">
+                <div class="row">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="bg-success text-white">Recent  Reviews</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <div class="col-md-12 blog__content">
+
+                        <div class="row">
+
+                            @foreach (var item in Model)
+                            {
+
+                                <div class="col-md-4 col-xs-6 col-xxs-12">
+                                    <article class="entry">
+                                        <div class="entry__img-holder">
+                                            <a href="/post/details/@item.PostID">
+                                                <img style="height:300px;width:100%"  src="@item.Image" alt="" class="entry__img">
+                                            </a>
+                                        </div>
+                                        <div class="entry__body">
+                                            <div class="entry__header">
+                                                <a href="#" class="entry__meta__category">@item.Category</a>
+                                                <h2 class="entry__title">
+                                                    <a href="/post/details/@item.PostID">@item.Title</a>
+                                                </h2>
+                                            </div>
+                                            <div class="entry__footer">
+                                                <a href="/post/details/@item.PostID" class="entry__meta__date">@item.Time</a>
+                                                <ul class="entry__meta entry__meta--right">
+                                                    <li>
+                                                        <a href="#" class="entry__meta__likes">
+                                                            <i class="ui-heart entry__meta__icon"></i>50
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="entry__meta__comments">
+                                                            <i class="ui-comment entry__meta__icon"></i>2
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                            }
+                            <!-- end col -->
+
+
+
+                        </div> <!-- end row -->
+                        <!-- Pagination -->
+                        <div class="pagination clearfix">
+                            <nav class="pagination__link older-posts text-center">
+                                <a href="#" class="pagination__page btn btn-lg btn-color">
+                                    <span>Older Posts</span><i class="ui-arrow-right"></i>
+                                </a>
+                            </nav>
+                        </div>
+
+                    </div> <!-- end blog content -->
+
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section> <!-- end blog standard -->
+
+
+    </main> <!-- end main-wrapper -->
+
+    @*offers show*@
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="bg-primary text-white">Recent Offers</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="owl-carousel product-slider owl-theme">
+            @{
+
+                foreach (var item in ViewData["Offers"] as List<DataLayer.Class.Offer>)
+
+                {
+                    <div class="item col-md-12 col-xs-6 col-xxs-12">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <a href="/offer/Details/@item.OfferId">
+                                    <img style="height:300px;width:100%" src="@item.Image" alt="" class="entry__img">
+                                </a>
+                            </div>
+                            <div class="entry__body">
+                                <div class="entry__header">
+                                    <a href="#" class="entry__meta__category">snack</a>
+                                    <h2 class="entry__title">
+                                        <a href="/offer/Details/@item.OfferId">@item.ItemName</a>
+                                    </h2>
+                                </div>
+
+                            </div>
+                        </article>
+                    </div>
+                }
+            }
+
+
+        </div>
+</div>
+
+            @*<div class="container-fluid">
+
+                     <div class="owl-carousel product-slider owl-theme">
+                         <div class="item"><h4>1</h4></div>
+                         <div class="item"><h4>2</h4></div>
+                         <div class="item"><h4>3</h4></div>
+                         <div class="item"><h4>4</h4></div>
+                         <div class="item"><h4>5</h4></div>
+                         <div class="item"><h4>6</h4></div>
+                         <div class="item"><h4>7</h4></div>
+                         <div class="item"><h4>8</h4></div>
+                         <div class="item"><h4>9</h4></div>
+                         <div class="item"><h4>10</h4></div>
+                         <div class="item"><h4>11</h4></div>
+                         <div class="item"><h4>12</h4></div>
+                </div>
+
+
+                 </div>*@
+
+            @section scripts
+    {
+                <script>
+
+            var owl = $('.product-slider');
+            owl.owlCarousel({
+                items: 4,
+                dots: false,
+                smartSpeed: 800,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 4
+                        }
+                    }
+
+            });
+
+
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+
+                </script>
+                <script src="~/Content/js/owl.carousel.min.js"></script>
+                <script src="~/Scripts/menu-index.js"></script>
+            }
+
+</body>

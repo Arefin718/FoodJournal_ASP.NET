@@ -1,0 +1,164 @@
+﻿@model DataLayer.Class.Recipe
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+@section styles{
+    <link href="~/Content/css/post-details.css" rel="stylesheet" />
+    <link href="~/Content/css/user-login.css" rel="stylesheet" />
+}
+<div class="loader-mask">
+    <div class="loader">
+        <div></div>
+    </div>
+</div>
+<!-- logo -->
+<header class="logo-wrap">
+   <h2>@Model.RecipeName  Recipe</h2>
+</header>
+
+
+<!-- Recipe Img -->
+<div class="container">
+    <div class="single-post__img-holder" style="background-image: url('@Model.Image')">
+        <!-- <images src="images/blog/post_1_big.jpg" alt="" class="entry__img"> -->
+    </div>
+</div>
+
+<!-- Content -->
+<section class="section-wrap section-blog pt-50 pb-50">
+    <div class="container">
+
+
+
+        @{
+
+            if (Session["UserID"] != null)
+            {
+
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button id="popUpOpen" class="text-danger ui-button" data-popup-open="popup-1">Report</button>
+                    </div>
+                </div>
+
+            }
+
+        }
+
+        <div class="row">
+            @{
+                if (Session["UserID"] != null)
+                {
+
+
+                    if (Model.UserId == Convert.ToInt32(Session["UserID"]))
+                    {
+                    <div class="col-md-12">
+                        <a style="font-size:larger" href="/recipe/edit/@Model.RecipeId" class="btn  bg-primary">Edit</a>
+                        <a style="font-size:larger;" href="/recipe/delete/@Model.RecipeId" class="btn  bg-danger">Delete</a>
+                    </div>
+                        }
+                    }
+
+                }
+
+
+
+            <div class="row left" style="margin-top:20px;">
+                <div class="col-md-12">
+                    <h1>Recipe Title: @Model.RecipeName</h1>
+                    <h3>Ingredients: @Model.Ingredients</h3>
+                    <p>Description: @Model.Description</p>
+                    <p>Cooking Time: @Model.CookingTime</p>
+                    <p>Person: @Model.Person</p>
+                    <p>Post Date: @Model.Time</p>
+
+                </div>
+
+            </div>
+        </div>
+       
+                    
+
+              
+            <!-- sidebar -->
+            <aside class="row right  sidebar">
+
+                <!-- about me -->
+                <div class="widget widget-about text-center">
+                    <img style="height:160px; width:160px;" src="@Model.User.Image" alt="" class="widget-about-img">
+                    <p class="widget-about-text">Hi there! My name is <a href="/profile/view/@Model.User.UserID">@Model.User.Name</a>, my desire is to help you to share my special and delicious recipes.</p>
+                    <div class="socials">
+                        <a href="#"><i class="ui-twitter"></i></a>
+                        <a href="#"><i class="ui-facebook"></i></a>
+                        <a href="#"><i class="ui-instagram"></i></a>
+                        <a href="#"><i class="ui-pinterest"></i></a>
+                        <a href="#"><i class="ui-google"></i></a>
+                    </div>
+                </div>
+
+
+            </aside> <!-- end sidebar -->
+
+        </div> <!-- end row -->
+    
+</section> <!-- end blog standard -->
+
+<div class="container">
+
+    <div class="popup" id="reportPopUp" data-popup="popup-1">
+
+        <div class="popup-inner">
+
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="bg-danger text-white">Report About This Recipe</h2>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+
+                <form id="report">
+                    <input type="hidden" value="Recipe" name="Type" id="TypeOfPost" />
+                    <input type="hidden" value="@Session["UserID"]" name="ReportedBy" id="ReportedBy" />
+
+                    <input type="hidden" value="@Model.UserId" name="ReportedId" id="ReportedId" />
+
+                    <input type="hidden" value="@Model.RecipeId" name="RecipeId" id="RecipeId" />
+
+                    <textarea name="Details" rows="10" cols="76" id="Details">
+                        </textarea>
+
+                    <button onclick="reportSubmit()" class="bg-danger text-white" type="submit">Submit</button>
+
+                </form>
+
+            </div>
+
+
+
+
+
+            <div class="row">
+                <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+@section scripts{
+    
+<script src="~/Scripts/report.js"></script>
+    
+    }

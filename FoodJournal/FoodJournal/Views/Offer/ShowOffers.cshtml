@@ -1,0 +1,58 @@
+﻿@model IEnumerable<DataLayer.Class.Offer>
+
+@{
+    ViewBag.Title = "ShowOffers";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+
+<div class="container">
+   <p><a href="/offer/NewOffer/@Convert.ToInt32(ViewData["RestaurantId"])">Post New Offer</a></p>
+
+    <table class="table">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferValidity)
+            </th>
+            <th>
+                Options
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfferDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfferValidity)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OfferId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OfferId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OfferId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

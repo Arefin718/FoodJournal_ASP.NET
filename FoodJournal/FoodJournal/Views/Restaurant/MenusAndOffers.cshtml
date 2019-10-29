@@ -1,0 +1,300 @@
+﻿@model IEnumerable<DataLayer.Class.Menu>
+
+@{
+    ViewBag.Title = "MenusAndOffers";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+@section styles{
+    <style>
+    html, body, #map-canvas {
+        height: 350px;
+        width: 100%;
+        margin-top: 5px;
+        padding: 0px
+    }
+</style>
+
+<link href="~/Content/css/user-login.css" rel="stylesheet" />
+
+
+    }
+
+
+@{
+    var rest = ViewData["RestaurantInfo"] as DataLayer.Class.Restaurant;
+}
+
+
+    <div class="container">
+
+
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-success text-white">@rest.RestaurantName</h1>
+        </div>
+    </div>
+         
+
+    <div class="row">
+        <div class="col-md-12 text-left">
+            <h5><b class="text-dark">Location: </b>@rest.Location</h5>
+        </div>
+    </div>
+    
+       
+    @{   if (Session["UserID"] != null && Session["UserLatitude"] != null && Session["UserLongitude"] != null)
+        {
+            <dd>
+               <b> Distence From Your Location: </b> <span id="distenceFromUser"></span>
+            </dd>
+
+
+                <input type="hidden" id="userlat" value="@double.Parse(Session["UserLatitude"].ToString())" />
+                <input type="hidden" id="userlon" value="@double.Parse(Session["UserLongitude"].ToString())" />
+                <input type="hidden" id="reslat" value="@rest.Latitude" />
+                <input type="hidden" id="reslon" value="@rest.Longitude" />
+
+
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button id="popUpOpen" class="text-danger ui-button" data-popup-open="popup-1">Report</button>
+                    </div>
+                </div>
+
+        }
+        else
+        {
+
+            <dt style="color:dodgerblue">
+                Login To get Distence & Direction to the Restaurant
+            </dt>
+
+
+
+        }
+
+    }
+        
+
+        <div class="popup" id="reportPopUp" data-popup="popup-1">
+
+            <div class="popup-inner">
+
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h2 class="bg-danger text-white">Report About @rest.RestaurantName</h2>
+
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+
+                    <form id="report">
+                        <input type="hidden" value="Restaurant" name="Type" id="TypeOfPost"/>
+                        <input type="hidden" value="@Session["UserID"]" name="ReportedBy" id="ReportedBy"/>
+
+                        <input type="hidden" value="@rest.UserID" name="ReportedId" id="ReportedId"/>
+
+                        <input type="hidden" value="@rest.RestaurantId" name="RestaurantId" id="RestaurantId"/>
+
+                        <textarea name="Details" rows="10" cols="76" id="Details">
+                        </textarea>
+
+                        <button onclick="reportSubmit()" class="bg-danger text-white"  type="submit">Submit</button>
+      
+                    </form>
+
+                </div>
+
+
+
+
+
+                <div class="row">
+                    <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    <div id="tabs">
+
+        <ul>
+            <li><a href="#tabs-1">Menus</a></li>
+            <li><a href="#tabs-2">Offers</a></li>
+            <li><a href="#tabs-3">Reviews</a></li>
+        </ul>
+
+
+        <div class="row" id="tabs-1">
+
+            @foreach (var item in Model)
+            {
+
+
+                <div class="item col-md-4 col-xs-6 col-xxs-12">
+                    <article class="entry">
+                        <div class="entry__img-holder">
+                            <a href="/menu/Details/@item.MenuId">
+                                <img style="height:280px;width:100%" src="@item.Image" alt="" class="entry__img">
+                            </a>
+                        </div>
+                        <div class="entry__body">
+                            <div class="entry__header">
+                                <h2 class="entry__title">
+                                    <a href="/menu/Details/@item.MenuId.">@item.ItemName</a>
+                                </h2>
+                                <a href="#" class="entry__meta__category"><b>Price: </b>@item.Price</a>
+
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+
+
+
+            }
+
+        </div>
+
+        <div class="row" id="tabs-2">
+
+
+            @foreach (var item in ViewData["Offers"] as List<DataLayer.Class.Offer>)
+            {
+
+
+                <div class="item  col-xs-6 col-xxs-6  col-md-4">
+                    <article class="entry">
+                        
+                        <div class="entry__img-holder">
+                            <span  class="row" >test</span>
+                            <a href="/offer/Details/@item.OfferId">
+                                <img style="height:280px;width:100%" src="@item.Image" alt="" class="entry__img">
+                            </a>
+                        </div>
+                        <div class="entry__body">
+                            <div class="entry__header">
+                                <h2 class="entry__title">
+                                    <a href="/offer/Details/@item.OfferId">@item.ItemName</a>
+                                </h2>
+                                <a href="#" class="entry__meta__category"><b>Offer Price: </b>@item.Price</a>
+
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+
+
+
+            }
+
+        </div>
+
+
+        <div class="row" id="tabs-3">
+
+
+            @foreach (var item in ViewData["RestaurantReviews"] as List<DataLayer.Post>)
+            {
+
+
+                <div class="col-md-4 col-xs-6 col-xxs-12">
+                    <article class="entry">
+                        <div class="entry__img-holder">
+                            <a href="/post/details/@item.PostID">
+                                <img style="height:280px;width:100%" src="@item.Image" alt="" class="entry__img">
+                            </a>
+                        </div>
+                        <div class="entry__body">
+                            <div class="entry__header">
+                                <a href="#" class="entry__meta__category">@item.Category</a>
+                                <h2 class="entry__title">
+                                    <a href="/post/details/@item.PostID">@item.Title</a>
+                                </h2>
+                            </div>
+                            <div class="entry__footer">
+                                <a href="/post/details/@item.PostID" class="entry__meta__date">@item.Time</a>
+                                <ul class="entry__meta entry__meta--right">
+                                    <li>
+                                        <a href="#" class="entry__meta__likes">
+                                            <i class="ui-heart entry__meta__icon"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="entry__meta__comments">
+                                            <i class="ui-comment entry__meta__icon"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+
+
+            }
+
+        </div>
+
+
+
+
+        
+
+    </div>
+
+    <hr />
+
+
+    @{   if (Session["UserID"] != null)
+        {
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="bg-primary text-white">Direction From your Location</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="map-canvas"></div>
+            </div>
+
+        } }
+</div>
+
+
+
+@section scripts{
+
+    <script>
+
+        $(function () {
+            $("#tabs").tabs();
+        });
+
+
+    </script>
+
+
+   
+    <script src="~/Scripts/report.js"></script>
+
+    <script src="~/Scripts/offer-details.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEJeUG6el1uAtNYRLvMBWr3tLasd2GhA&libraries=geometry"></script>
+
+
+    }

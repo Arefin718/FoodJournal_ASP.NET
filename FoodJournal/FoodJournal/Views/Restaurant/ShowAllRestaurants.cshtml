@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DataLayer.Class.Restaurant>
+
+@{
+    ViewBag.Title = "ShowAllRestaurants";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">Restaurants</h1> 
+        </div>
+    </div>
+    <div class="row" style="font-size: 18px; height:60px; border-bottom: 2px solid blue;">
+
+            <div class="col-md-2 text-right" style="padding-top:15px;">
+                <span >Name</span>
+            </div>
+            <div class="col-md-1 text-left" style="padding-top:15px;">
+                <span style="font-size: 12px;"><input checked="checked" style="height:25px;" type="radio" id="searchByName" name="searchBy" value="name"></span>
+            </div>
+            <div class="col-md-1" style="padding-top:15px;">
+                <span>Location</span>
+            </div>
+            <div class="col-md-1" style="padding-top:15px;">
+                <span><input style="height:25px;" type="radio" id="searchByLoc" name="searchBy" value="Location"></span>
+            </div>
+            <div class="col-md-7">
+                <form id="filterSearch">
+                    <input  type="text" autocomplete="off" id="resrSearch" placeholder="Search....." />
+                </form>
+        </div>
+    </div>
+
+
+    <table class="table">
+        <tr>
+
+            <th>
+               Restaurant Name
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+   
+                <td>
+                    <a href="/restaurant/MenusAndOffers/@Html.DisplayFor(modelItem => item.RestaurantId)">@Html.DisplayFor(modelItem => item.RestaurantName)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
+
+@section scripts{
+            <script src="~/Scripts/all-restaurants.js"></script>
+    }

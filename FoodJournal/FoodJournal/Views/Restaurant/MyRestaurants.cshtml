@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DataLayer.Class.Restaurant>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+
+<div class="container">
+    <h2 class="col-md-offset-4">My Restaurants</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RestaurantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                Options
+            </th>
+            <th>
+                Manage
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RestaurantName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.RestaurantId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.RestaurantId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.RestaurantId })
+                </td>
+                <td><a href="/offer/ShowOffers/@item.RestaurantId">Offer</a> | <a href="/menu/showmenus/@item.RestaurantId">Menu</a></td>
+
+            </tr>
+        }
+
+    </table>
+</div>

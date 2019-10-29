@@ -1,0 +1,54 @@
+﻿@model IEnumerable<DataLayer.Class.Offer>
+@{
+    ViewBag.Title = "ShowAllOffers";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+<div class="container">
+
+          <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="bg-success text-white">Offers by Restaurants</h1>
+                </div>
+            </div>
+        
+
+        @{foreach (var item in Model)
+
+            {
+                <div class="item col-md-4 col-xs-6 col-xxs-12">
+                    <article class="entry">
+                        <div class="entry__img-holder">
+                            <a href="/offer/Details/@item.OfferId">
+                                <img style="height:280px;width:100%" src="@item.Image" alt="" class="entry__img">
+                            </a>
+                        </div>
+                        <div class="entry__body">
+                            <div class="entry__header">
+
+                                <h2 class="entry__title">
+                                   <a href="/restaurant/MenusAndOffers/@item.Restaurant.RestaurantId">@item.Restaurant.RestaurantName</a> 
+                                </h2>
+
+                                <a href="#" class="entry__meta__category"></a>
+                                <h2 class="entry__title">
+                                    <a href="/offer/Details/@item.OfferId">@item.ItemName</a>
+                                </h2>
+                                <h5 class="entry__title">
+                                    Offer Price: @item.Price
+                                </h5>
+                           
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            }
+        }
+
+
+
+</div>
+
+
+

@@ -1,0 +1,236 @@
+﻿@model DataLayer.User
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+@section styles
+    {    
+      <link href="~/Content/css/profile-view.css" rel="stylesheet" />
+      <link href="~/Content/css/user-login.css" rel="stylesheet" />
+  }
+
+
+
+<div class="container profile-view">
+
+
+
+
+
+
+    @{
+
+        if (Session["UserID"] != null)
+        {
+
+
+
+
+          
+                if (Int32.Parse(Session["UserID"].ToString()) == Model.UserID)
+                {
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+
+                            <h1 class="bg-info text-white"><a href="/profile/edit/@Model.UserID">Edit Profile</a> | <a href="/profile/PassChange/@Model.UserID">Password Change</a> | <a href="/profile/ProPicChange/@Model.UserID">Pro Pic Change</a></h1>
+                        </div>
+                    </div>
+
+                }
+          
+
+
+
+
+
+            <div class="row">
+                <div class="col-md-12 text-right">
+                    <button id="popUpOpen" class="text-danger ui-button" data-popup-open="popup-1">Report</button>
+                </div>
+            </div>
+
+            }
+
+        }
+
+
+
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img style="height:200px; width:200px;" class="img-circle" src="@Model.Image" />
+        </div>
+    </div>
+
+    <table>
+
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>@Model.Address</td>
+        </tr>
+    </table>
+
+
+
+    <div id="tabs">
+
+        <ul>
+            <li><a href="#tabs-1">Post</a></li>
+            <li><a href="#tabs-2">Recipes</a></li>
+        </ul>
+
+
+        <div class="row" id="tabs-1">
+
+            @{
+
+                foreach (var item in ViewData["posts"] as List<DataLayer.Post>)
+
+                {
+
+
+                    <div class="col-md-4 col-xs-6 col-xxs-12">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <a href="/post/details/@item.PostID">
+                                    <img style="height:300px;width:100%" src="@item.Image" alt="" class="entry__img">
+                                </a>
+                            </div>
+                            <div class="entry__body">
+                                <div class="entry__header">
+                                    <a href="#" class="entry__meta__category">snack</a>
+                                    <h2 class="entry__title">
+                                        <a href="/post/details/@item.PostID">@item.Title</a>
+                                    </h2>
+                                </div>
+                                <div class="entry__footer">
+                                    <a href="/post/details/@item.PostID" class="entry__meta__date">@item.Time</a>
+                                    <ul class="entry__meta entry__meta--right">
+                                        <li>
+                                            <a href="#" class="entry__meta__likes">
+                                                <i class="ui-heart entry__meta__icon"></i>50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="entry__meta__comments">
+                                                <i class="ui-comment entry__meta__icon"></i>2
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                }
+
+            }
+
+        </div>
+
+        <div class="row" id="tabs-2">
+         
+            @{foreach (var item in ViewData["recipes"] as List<DataLayer.Class.Recipe>)
+
+                {
+                    <div class="item col-md-4 col-xs-6 col-xxs-12">
+                        <article class="entry">
+                            <div class="entry__img-holder">
+                                <a href="/recipe/Details/@item.RecipeId">
+                                    <img src="@item.Image" alt="" class="entry__img">
+                                </a>
+                            </div>
+                            <div class="entry__body">
+                                <div class="entry__header">
+                                    <a href="#" class="entry__meta__category">snack</a>
+                                    <h2 class="entry__title">
+                                        <a href="/recipe/Details/@item.RecipeId">@item.RecipeName</a>
+                                    </h2>
+                                </div>
+
+                            </div>
+                        </article>
+                    </div>
+                }
+            }
+        </div>
+
+
+        </div>
+
+
+
+
+
+
+    <div class="popup" id="reportPopUp" data-popup="popup-1">
+
+        <div class="popup-inner">
+
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="bg-danger text-white">Report About @Model.Name</h2>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+
+                <form id="report">
+                    <input type="hidden" value="User" name="Type" id="TypeOfPost" />
+                    <input type="hidden" value="@Session["UserID"]" name="ReportedBy" id="ReportedBy" />
+
+                    <input type="hidden" value="@Model.UserID" name="ReportedId" id="ReportedId" />
+
+                    <textarea name="Details" rows="10" cols="76" id="Details">
+                        </textarea>
+
+                    <button onclick="reportSubmit()" class="bg-danger text-white" type="submit">Submit</button>
+
+                </form>
+
+            </div>
+
+
+
+
+
+            <div class="row">
+                <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+@section scripts{
+    
+    <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+</script>
+
+        <script src="~/Scripts/report.js"></script>
+    }

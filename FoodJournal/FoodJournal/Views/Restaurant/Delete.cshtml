@@ -1,0 +1,64 @@
+﻿@model DataLayer.Class.Restaurant
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-danger text-white">Delete Restaurant</h1>
+        </div>
+        </div>
+     
+        <hr />
+        <dl class="dl-horizontal">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RestaurantName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RestaurantName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Location)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rating)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <div class="row">
+                    <div class="col-md-4 offset-4 text-center">
+                        <input type="submit" value="Delete" class="btn-danger" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a style="padding:10px; 5px;" href="/Restaurant/MyRestaurants/@Convert.ToInt32(Session["UserID"])" class="bg-primary text-white">Back</a>
+                </div>
+            </div>
+
+        }
+    </div>

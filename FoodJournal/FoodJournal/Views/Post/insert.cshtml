@@ -1,0 +1,143 @@
+﻿@model DataLayer.Post
+
+@{
+    ViewBag.Title = "newReview";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+}
+
+
+@section styles
+    {
+    <link href="~/Content/css/post-insert.css" rel="stylesheet" />
+    
+    }
+
+
+
+<div class="container newpost">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">New Post</h1>
+        </div>
+    </div>    
+
+
+        @using (Html.BeginForm("insert", "Post", FormMethod.Post, new{ enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.RestaurantName, "Restaurant Name", htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.RestaurantName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.RestaurantName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RestaurantName, "Restaurant Name", htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <div class="ui-widget">
+                            <input class="form-control" name="RestaurantName" id="restaurantName" required = "required">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.RestaurantName, "Category", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                <div class="ui-widget">
+                                    <select name="Category">
+                                        <option>Lunch</option>
+                                        <option>Dinner</option>
+                                        <option>BreakFast</option>
+                                        <option>Desert</option>
+                                        <option>Beverage</option>
+                                        <option>Buffet</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" value="0" id="restId" name="RestaurantId" />
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Title, "Title", htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control", required = "required" , type="file"} })
+                                @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                <div class="ui-widget">
+                                    <input class="form-control" name="Location" id="restaurantLocation" required = "required" >
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control", placeholder = "Rate between 0 to 5", min = "0", max = "5", required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-6 col-md-2">
+                                <input type="submit" value="Post" class="btn btn-default" />
+                            </div>
+                        </div>
+            </div>
+        }
+
+</div>
+
+
+@section scripts{
+    
+<script src="~/Content/js/jquery-ui.js"></script>
+<script src="~/Scripts/post-insert.js"></script>
+
+    }

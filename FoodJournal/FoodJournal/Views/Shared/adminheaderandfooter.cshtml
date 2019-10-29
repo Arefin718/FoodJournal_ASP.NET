@@ -1,0 +1,200 @@
+﻿<html>
+<head>
+
+    <title>Food Journal | Admin</title>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="">
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Cantata+One:400,700%7CRoboto:300,400,700' rel='stylesheet'>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/font-icons.css" />
+    <link rel="stylesheet" href="~/Content/css/style.css" />
+    <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="~/Content/images/logo_dark.png">
+    <link rel="apple-touch-icon" href="~/Content/images/apple-touch-icon.html">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/images/apple-touch-icon-114x114.png">
+    <link href="~/Content/css/headerfooter.css" rel="stylesheet" />
+    <link href="~/Content/css/profile-view.css" rel="stylesheet" />
+    <style>
+        input[type="text"], input[type="number"] {
+            font-size: 18px;
+        }
+    </style>
+
+    @RenderSection("styles", false)
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="loader-mask">
+        <div class="loader">
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Navigation -->
+    <header class="nav">
+
+
+
+        <div class="nav__holder nav--sticky">
+            <div class="container relative">
+                <div class="flex-parent">
+
+                    <!-- Nav-header -->
+                    <div class="nav__header clearfix">
+                        <button type="button" class="nav__icon-toggle" id="nav__icon-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="nav__icon-toggle-bar"></span>
+                            <span class="nav__icon-toggle-bar"></span>
+                            <span class="nav__icon-toggle-bar"></span>
+                        </button>
+                    </div> <!-- end nav-header -->
+                    <!-- Nav-wrap -->
+                    <nav id="navbar-collapse" class="flex-child nav__wrap collapse navbar-collapse">
+                        <ul class="nav__menu">
+
+
+
+                            
+
+                        @{ if (Session["AdminID"] != null)
+                            {
+                                <li class="nav__dropdown">
+                                    <a href="/admin/index">Home</a>
+                                </li>
+                            <li class="nav__dropdown">
+                                <a href="#">Admins</a>
+                                <i class="ui-arrow-down nav__dropdown-trigger"></i>
+                                <ul class="nav__dropdown-menu">
+                                    <li><a href="/admin/create">Add Admin</a></li>
+                                    <li><a href="/admin/list">Show All</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="nav__dropdown">
+                                <a href="#">Reports</a>
+                                <i class="ui-arrow-down nav__dropdown-trigger"></i>
+                                <ul class="nav__dropdown-menu">
+                                    <li><a href="/report/ShowAllRestaurantReport">Restaurant</a></li>
+                                    <li><a href="/report/ShowAllReciepReport">Recipe</a></li>
+                                    <li><a href="/report/ShowAllUserReport">User</a></li>
+                                    <li><a href="/report/ShowAllPostReport">Food Review</a></li>
+                                </ul>
+                            </li>
+
+
+
+                            <li>
+                                <a href="/admin/AllRestaurants">Restaurants</a>
+                            </li>
+
+                            <li>
+                                <a href="/admin/AllUsers">Users</a>
+                            </li>
+
+                            <li class="nav__dropdown">
+                                <a href="#"><img style="height:38px; width:39px" src="@Session["AdminImage"] " class="img-circle" />@Session["AdminName"] </a>
+                                <i class="ui-arrow-down nav__dropdown-trigger"></i>
+                                <ul class="nav__dropdown-menu">
+                                    <li><a href="/adminProfile/view/@Session["AdminID"]">Profile</a></li>
+                                    <li><a href="/adminProfile/Logout">Logout</a></li>
+
+                                </ul>
+
+
+                            </li>
+
+                            <!-- Search -->
+                                <li>
+                                    <div class="flex-child nav__search hidden-sm hidden-xs">
+                                        <form method="get" class="nav__search-form">
+                                            <input type="search" class="nav__search-input" placeholder="Search..." id="search">
+                                            <button type="button" class="nav__search-submit">
+                                                <i class="ui-search"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </li>
+
+                                                                <!-- Mobile Search -->
+                                <li class="hidden-lg hidden-md">
+                                    <form method="get" class="nav__search-mobile">
+                                        <input type="text" placeholder="Search..." class="nav__search-mobile-input" id="msearch">
+                                        <button type="submit" class="nav__search-mobile-button">
+                                            <i class="ui-search"></i>
+                                        </button>
+                                    </form>
+                                </li>
+                            }
+                        }
+
+                                 
+
+
+                        </ul> <!-- end menu -->
+
+                    </nav> <!-- end nav-wrap -->
+                    <!-- Search -->
+              
+                </div> <!-- end flex-parent -->
+            </div> <!-- end container -->
+
+        </div>
+    </header> <!-- end navigation -->
+    <!-- contents of the page starts -->
+
+    @RenderBody()
+
+    <!-- contents of the page ends -->
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="footer__widgets">
+                <div class="socials footer__socials">
+                    <a href="#"><i class="ui-twitter"></i></a>
+                    <a href="#"><i class="ui-facebook"></i></a>
+                    <a href="#"><i class="ui-linkedin"></i></a>
+                    <a href="#"><i class="ui-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+      
+    </footer> <!-- end footer -->
+
+    <div id="back-to-top">
+        <a href="#top"><i class="ui-arrow-up"></i></a>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/plugins.js"></script>
+    <script type="text/javascript" src="~/Scripts/scripts.js"></script>
+    <script src="~/Content/js/jquery-ui.js"></script>
+    <script src="~/Scripts/headerandfooter.js"></script>
+    <!-- Scripts -->
+
+
+    @RenderSection("scripts", false)
+
+</body>
+
+</html>

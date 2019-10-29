@@ -1,0 +1,62 @@
+﻿@model DataLayer.Class.Admin
+
+@{
+    ViewBag.Title = "Admin Profile";
+    Layout = "~/Views/Shared/adminheaderandfooter.cshtml";
+}
+@section styles
+    {
+    <link href="~/Content/css/profile-view.css" rel="stylesheet" />
+    <link href="~/Content/css/user-login.css" rel="stylesheet" />
+}
+
+
+<div class="container profile-view">
+    <h1>Welcome To Admin Panel</h1>
+
+    @{
+
+        if (Session["AdminID"] != null)
+        {
+
+            if (Int32.Parse(Session["AdminID"].ToString()) == Model.AdminID)
+            {
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <h1 class="bg-info text-white"><a href="/AdminProfile/edit/@Model.AdminID">Edit Profile</a> | <a href="/AdminProfile/PassChange/@Model.AdminID">Change Password</a> | <a href="/AdminProfile/ProPicChange/@Model.AdminID"> Change Profile Image</a></h1>
+                    </div>
+                </div>
+
+            }
+
+        }
+
+    }
+
+
+
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img style="height:200px; width:200px;" class="img-circle" src="@Model.Image" />
+        </div>
+    </div>
+
+    <table>
+
+        <tr>
+            <td>Name</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Model.Email</td>
+        </tr>
+       
+    </table>
+
+
+</div>
+

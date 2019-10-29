@@ -1,0 +1,68 @@
+﻿@model IEnumerable<FoodJournal.Models.UserModelView>
+
+@{
+    ViewBag.Title = "AllUsers";
+    Layout = "~/Views/Shared/adminheaderandfooter.cshtml";
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">All User Details</h1>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered text-center">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+               Restaurants
+            </th>
+            <th>
+                Reports
+            </th>
+            <th>
+                Posts
+            </th>
+            <th>
+                Recipes
+            </th>
+
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                   <a href="/profile/view/@item.UserId"><img src="@item.Image" style="height:80px; width:80px; border-radius:50%" /></a> 
+                </td>
+                <td>
+                    <a href="/profile/view/@item.UserId">@Html.DisplayFor(modelItem => item.Name)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalRestaurant)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalReport)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalRecipe)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>

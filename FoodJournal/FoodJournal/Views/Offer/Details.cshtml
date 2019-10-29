@@ -1,0 +1,134 @@
+﻿@model DataLayer.Class.Offer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/headerAndFooter.cshtml";
+    }
+
+@section styles{
+    <style>
+        html, body, #map-canvas {
+            height: 400px;
+            width: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+    </style>
+    
+    }
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="bg-info text-white">Offer Details</h1>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="@Model.Image" />
+        </div>
+    </div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            Restaurant Name
+        </dt>
+
+        
+        <dd>
+            <a href="/restaurant/MenusAndOffers/@Model.RestaurantId">@Html.DisplayFor(model => model.Restaurant.RestaurantName)</a>
+           
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restaurant.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Restaurant.Location)
+        </dd>
+
+
+
+        <dt>
+            Item Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            Description
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferDescription)
+        </dd>
+
+        <dt>
+            Offer Validity
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferValidity)
+        </dd>
+
+    
+
+    </dl>
+
+    @{  
+        if (Session["UserID"] != null && Session["UserLatitude"]!=null && Session["UserLongitude"]!=null)
+        {
+            <dt>
+                Distence From Your Location
+            </dt>
+
+            <dd id="distenceFromUser">
+
+            </dd>
+            <input type="hidden" id="userlat" value="@double.Parse(Session["UserLatitude"].ToString())" />
+            <input type="hidden" id="userlon" value="@double.Parse(Session["UserLongitude"].ToString())" />
+            <input type="hidden" id="reslat" value="@Model.Restaurant.Latitude" />
+            <input type="hidden" id="reslon" value="@Model.Restaurant.Longitude" />
+
+
+            <div class="row">
+                <div id="map-canvas"></div>
+            </div>
+
+        }
+        else
+        {
+
+            <dt style="color:dodgerblue">
+                Login To get Distence & Direction to the Restaurant
+            </dt>
+
+
+        }
+
+    }
+
+
+  
+
+</div>
+
+
+@section scripts{
+    
+<script src="~/Scripts/offer-details.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqEJeUG6el1uAtNYRLvMBWr3tLasd2GhA&libraries=geometry"></script>
+    
+ }
